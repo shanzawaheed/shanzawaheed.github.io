@@ -1,35 +1,90 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>QuickBook Invoice Connector</title><meta name="description" content="Invoice emails to QuickBooks bills, reviewed by you."><style>
-:root{--bg:#f7f8fa;--card:#fff;--text:#1d2433;--muted:#5b6475;--accent:#2a7d4f;--line:#e3e6ec}
-*{box-sizing:border-box}body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
-header{background:var(--card);border-bottom:1px solid var(--line)}
-.wrap{max-width:820px;margin:0 auto;padding:0 20px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;flex-wrap:wrap;gap:8px}
-nav .brand{font-weight:700;color:var(--text);text-decoration:none}
-nav .links a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:15px}
-nav .links a:hover{color:var(--accent)}
-main{padding:40px 0 60px}h1{font-size:30px;line-height:1.25;margin:0 0 8px}
-h2{font-size:20px;margin:32px 0 8px}.muted{color:var(--muted)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:24px 0}
-.step{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
-.step b{display:block;margin-bottom:4px}
-a{color:var(--accent)}footer{border-top:1px solid var(--line);padding:20px 0;font-size:14px;color:var(--muted)}
-</style></head>
-<body><header><div class="wrap"><nav><a class="brand" href="index.html">QuickBook Invoice Connector</a>
-<div class="links"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></nav></div></header>
-<main><div class="wrap"><h1>QuickBook Invoice Connector</h1>
-<p class="muted" style="font-size:18px;margin-top:0">Turn invoice emails into QuickBooks bills, with every line categorized and reviewed by you before anything is posted.</p>
-<div class="steps">
-<div class="step"><b>1. Read</b>Finds invoice emails under a Gmail label you choose and reads the attached invoice.</div>
-<div class="step"><b>2. Categorize</b>Proposes a bill with an expense category for each line, using rules you set.</div>
-<div class="step"><b>3. Review</b>You check and correct categories. Your corrections become rules for next time.</div>
-<div class="step"><b>4. Post</b>Approved bills are created in QuickBooks with the invoice PDF attached.</div>
+<title>QuickBook Invoice Connector</title><meta name="description" content="Turn invoice emails into categorized QuickBooks bills, reviewed by you before posting.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><rect x='1.5' y='4.5' width='27' height='21' rx='4' fill='%23fff' stroke='%231d2a4a' stroke-width='1.8'/><path d='M5 9h20M5 13.5h20M5 18h12' stroke='%23b9d4bf' stroke-width='1.6'/><path d='M17.5 19.5l3 3 6-7' fill='none' stroke='%232c7550' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="index.html"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect x="1.5" y="4.5" width="27" height="21" rx="4" fill="#fff" stroke="#1d2a4a" stroke-width="1.8"/><path d="M5 9h20M5 13.5h20M5 18h12" stroke="#b9d4bf" stroke-width="1.6"/><path d="M17.5 19.5l3 3 6-7" fill="none" stroke="#2c7550" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>QuickBook Invoice Connector</a>
+<nav class="site-nav" aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+</div></header>
+<main>
+<section class="hero"><div class="wrap">
+<div>
+<h1><span class="l1">Invoice emails in.</span><span class="l2">Categorized bills out.</span></h1>
+<p class="lede">QuickBook Invoice Connector reads the invoices in your Gmail, turns each one into a QuickBooks bill with an expense category on every line, and waits for your approval before anything is posted.</p>
+<a class="btn" href="mailto:shanzabutt90@gmail.com?subject=Invoice%20Connector%20setup">Ask about setup</a>
+<a class="btn-quiet" href="#how">See how it works</a>
+<p class="hero-note">Works with Gmail and QuickBooks Online.</p>
 </div>
-<div class="card"><h2 style="margin-top:0">Built for accuracy</h2>
-<p>Nothing is posted without approval. Duplicate invoices are detected, bills whose lines don't match the invoice total are blocked, and existing vendors are reused.</p>
-<p style="margin-bottom:0">Questions or a setup for your business? Email <a href="mailto:shanzabutt90@gmail.com">shanzabutt90@gmail.com</a>.</p></div></div></main>
-<footer><div class="wrap">&copy; 2026 QuickBook Invoice Connector &middot; Contact: <a href="mailto:shanzabutt90@gmail.com">shanzabutt90@gmail.com</a><br>
-Not affiliated with or endorsed by Intuit Inc. or Google LLC. QuickBooks is a trademark of Intuit Inc.; Gmail is a trademark of Google LLC.</div></footer>
+<div class="flow" role="img" aria-label="An invoice email becomes a bill: each line gets a category, the bill is approved, then posted to QuickBooks.">
+  <div class="mail">
+    <div class="mail-row"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><rect x="1.5" y="4" width="19" height="14" rx="2.5" fill="#fff" stroke="#1d2a4a" stroke-width="1.5"/><path d="M2.5 5.5l8.5 6.5 8.5-6.5" fill="none" stroke="#1d2a4a" stroke-width="1.5"/></svg><strong>Northside Paper Co.</strong><span class="chip">Invoices</span></div>
+    <div class="clip"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 1.5h5.5L13 5v9.5H4z" fill="#fff" stroke="#b8342c" stroke-width="1.3"/><path d="M6 8h5M6 10.5h5" stroke="#b8342c" stroke-width="1.2"/></svg>INV-2048.pdf</div>
+  </div>
+  <div class="invoice">
+    <div class="inv-head"><b>INV-2048</b><small>Due Nov 29</small></div>
+    <div class="line"><span class="desc">Card stock, 300 sheets</span><span class="amt">$184.00</span><span class="tag">Printing supplies</span></div>
+    <div class="line"><span class="desc">Toner cartridges ×2</span><span class="amt">$212.50</span><span class="tag">Printing supplies</span></div>
+    <div class="line"><span class="desc">Freight</span><span class="amt">$28.00</span><span class="tag guess">Shipping (please check)</span></div>
+    <div class="total"><span>Total</span><span>$424.50</span></div>
+    <div class="stamp">APPROVED</div>
+  </div>
+  <div class="posted"><span class="dot"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2l2.2 2.2 4.8-5" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Bill posted to QuickBooks, PDF attached</div>
+</div>
+</div></section>
+
+<section id="how"><div class="wrap">
+<h2>How it works</h2>
+<p class="section-lede">You stay in charge of the books. The connector does the typing.</p>
+<table class="ledger">
+<thead><tr><th scope="col"><span class="visually-hidden">Step</span></th><th scope="col">What the connector does</th><th scope="col">What you do</th></tr></thead>
+<tbody>
+<tr><th class="n" scope="row">1</th><td><span class="what">Finds new invoices</span>Checks the Gmail label you choose and reads each attached invoice, scanned ones included.</td><td class="you">Keep your invoices under one label.</td></tr>
+<tr><th class="n" scope="row">2</th><td><span class="what">Drafts the bill</span>Pulls the vendor, invoice number, dates and every line item, and suggests an expense category for each line.</td><td class="you">Nothing yet.</td></tr>
+<tr><th class="n" scope="row">3</th><td><span class="what">Asks for your review</span>Shows each draft with uncertain categories and new vendors marked, so you know where to look.</td><td class="you">Fix any category and approve.</td></tr>
+<tr><th class="n" scope="row">4</th><td><span class="what">Posts to QuickBooks</span>Creates the bill, attaches the invoice PDF and labels the email so it's never entered twice.</td><td class="you">Check the bill in QuickBooks, if you like.</td></tr>
+</tbody></table>
+</div></section>
+
+<section><div class="wrap learn">
+<div>
+<h2>It learns your categories</h2>
+<p class="section-lede" style="margin-bottom:0">Every business files expenses its own way. Correct a category once and the connector can remember it, by vendor or by item, so the next invoice comes in right.</p>
+</div>
+<div class="convo" aria-label="Example of correcting a category">
+  <div class="bubble bot">Freight from Northside Paper: I've put it under Shipping. Is that right?</div>
+  <div class="bubble me">Use Cost of goods sold, always for that vendor.</div>
+  <div class="rule-card"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8.2" fill="#e3f0e6" stroke="#2c7550" stroke-width="1.4"/><path d="M5.2 9.3l2.5 2.5 5-5.3" fill="none" stroke="#2c7550" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>New rule: <b>Northside Paper Co.</b> freight → <b>Cost of goods sold</b></span></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Built not to make a mess</h2>
+<p class="section-lede">Your accounts matter more than speed, so the checks are built in.</p>
+<ul class="guards">
+<li><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8.2" fill="#e3f0e6" stroke="#2c7550" stroke-width="1.4"/><path d="M5.2 9.3l2.5 2.5 5-5.3" fill="none" stroke="#2c7550" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Nothing posts without approval</b><span>Every bill waits for you, and a dry run shows what will happen first.</span></div></li>
+<li><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8.2" fill="#e3f0e6" stroke="#2c7550" stroke-width="1.4"/><path d="M5.2 9.3l2.5 2.5 5-5.3" fill="none" stroke="#2c7550" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>No duplicate bills</b><span>Vendor and invoice number are checked against QuickBooks before posting.</span></div></li>
+<li><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8.2" fill="#e3f0e6" stroke="#2c7550" stroke-width="1.4"/><path d="M5.2 9.3l2.5 2.5 5-5.3" fill="none" stroke="#2c7550" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Totals must add up</b><span>A bill whose lines don't match the invoice total is held back for you to fix.</span></div></li>
+<li><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8.2" fill="#e3f0e6" stroke="#2c7550" stroke-width="1.4"/><path d="M5.2 9.3l2.5 2.5 5-5.3" fill="none" stroke="#2c7550" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Your vendors, not new copies</b><span>Existing vendors are matched by name; new ones are flagged before they're created.</span></div></li>
+<li><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8.2" fill="#e3f0e6" stroke="#2c7550" stroke-width="1.4"/><path d="M5.2 9.3l2.5 2.5 5-5.3" fill="none" stroke="#2c7550" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>The original is kept</b><span>The invoice PDF is attached to the bill for your records and your accountant.</span></div></li>
+<li><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8.2" fill="#e3f0e6" stroke="#2c7550" stroke-width="1.4"/><path d="M5.2 9.3l2.5 2.5 5-5.3" fill="none" stroke="#2c7550" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Access stays with you</b><span>Sign-in keys are stored on your own computer, and you can revoke access any time.</span></div></li>
+</ul>
+</div></section>
+
+<section class="faq"><div class="wrap">
+<h2>Questions</h2>
+<details><summary>Which accounts does it work with?</summary><p>Any Gmail or Google Workspace mailbox, and QuickBooks Online. QuickBooks Desktop isn't supported.</p></details>
+<details><summary>Can it read scanned or photographed invoices?</summary><p>Yes. Typed PDFs are read directly, and scanned PDFs are read as images.</p></details>
+<details><summary>What happens to my email?</summary><p>The connector only reads emails under the label you choose. The one change it makes is adding a label to invoices once they're in QuickBooks. It never sends, forwards or deletes email.</p></details>
+<details><summary>How do I stop it?</summary><p>Remove its access in your Google account permissions and in your Intuit account's connected apps. It stops working immediately.</p></details>
+</div>
+<div class="wrap"><div class="cta-band"><div><h2>Stop retyping invoices</h2><p>Tell me about your setup and I'll get you connected.</p></div><a class="btn" href="mailto:shanzabutt90@gmail.com?subject=Invoice%20Connector%20setup">Email shanzabutt90@gmail.com</a></div></div>
+</section>
+</main>
+<footer class="site-foot"><div class="wrap">
+<div><nav aria-label="Footer"><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of service</a><a href="mailto:shanzabutt90@gmail.com">shanzabutt90@gmail.com</a></nav>
+<p>Not affiliated with or endorsed by Intuit Inc. or Google LLC. QuickBooks is a trademark of Intuit Inc. Gmail is a trademark of Google LLC.</p></div>
+<div>&copy; 2026 QuickBook Invoice Connector</div>
+</div></footer>
 </body></html>
